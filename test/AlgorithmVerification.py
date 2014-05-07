@@ -24,3 +24,15 @@ class TestSearchAlgorithms(unittest.TestCase):
     def test_boyer_moore_multiple_results(self):
         locations = list(self.moore.search(self.test_text, "that"))
         self.assertEquals(locations, list((10, 29)))
+
+    def test_boyer_moore_no_results(self):
+        locations = list(self.moore.search(self.test_text, "asdf"))
+        self.assertEquals(locations, list())
+
+    def test_boyer_moore_horsepool_no_results(self):
+        locations = list(self.horspool.search(self.test_text, "asdf"))
+        self.assertEquals(locations, list())
+
+    def test_knut_morris_pratt_no_results(self):
+        locations = list(self.pratt.search(self.test_text, "asdf"))
+        self.assertEquals(locations, list())
