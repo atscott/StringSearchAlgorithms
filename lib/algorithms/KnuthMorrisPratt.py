@@ -1,6 +1,6 @@
 from lib.algorithms.StringSearcher import StringSearcher
 
-__author__ = 'atscott'
+__author__ = 'http://en.wikibooks.org/wiki/Algorithm_Implementation/String_searching/Knuth-Morris-Pratt_pattern_matcher'
 
 
 class KnuthMorrisPratt(StringSearcher):

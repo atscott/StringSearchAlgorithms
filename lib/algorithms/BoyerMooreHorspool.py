@@ -1,6 +1,6 @@
 from lib.algorithms.StringSearcher import StringSearcher
 
-__author__ = 'atscott'
+__author__ = 'http://en.wikipedia.org/wiki/Talk%3ABoyer%E2%80%93Moore_string_search_algorithm#Python'
 
 
 class BoyerMooreHorspool(StringSearcher):
