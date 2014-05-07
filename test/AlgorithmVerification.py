@@ -12,6 +12,8 @@ class TestSearchAlgorithms(unittest.TestCase):
         self.horspool = BoyerMooreHorspool()
         self.pratt = KnuthMorrisPratt()
         self.moore = BoyerMoore()
+        f = open('aesop11.txt', 'r')
+        self.aesop = f.read()
 
     def test_knuth_morris_pratt_multiple_results(self):
         locations = list(self.pratt.search(self.test_text, "that"))
@@ -33,6 +35,18 @@ class TestSearchAlgorithms(unittest.TestCase):
         locations = list(self.horspool.search(self.test_text, "asdf"))
         self.assertEquals(locations, list())
 
-    def test_knut_morris_pratt_no_results(self):
+    def test_knuth_morris_pratt_no_results(self):
         locations = list(self.pratt.search(self.test_text, "asdf"))
         self.assertEquals(locations, list())
+
+    def test_knuth_morris_pratt_returns_correct_size_from_aesop(self):
+        locations = list(self.pratt.search(self.aesop, "that"))
+        self.assertEquals(len(locations), 356)
+
+    def test_boyer_moore_returns_correct_size_from_aesop(self):
+        locations = list(self.moore.search(self.aesop, "that"))
+        self.assertEquals(len(locations), 356)
+
+    def test_boyer_moore_horsepool_returns_correct_size_from_aesop(self):
+        locations = list(self.horspool.search(self.aesop, "that"))
+        self.assertEquals(len(locations), 356)
