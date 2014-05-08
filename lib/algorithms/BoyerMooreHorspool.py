@@ -25,3 +25,6 @@ class BoyerMooreHorspool(StringSearcher):
             if j == -1:
                 yield i + 1
             k += skip[ord(text[k])]
+
+    def __str__(self):
+        return 'Boyer Moore Horspool'

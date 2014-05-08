@@ -17,3 +17,6 @@ class NaiveSearch(StringSearcher):
                 matches.append(k)
             k += 1
         return matches
+
+    def __str__(self):
+        return 'Naive'

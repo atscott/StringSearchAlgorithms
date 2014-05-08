@@ -33,3 +33,6 @@ class KnuthMorrisPratt(StringSearcher):
             match_len += 1
             if match_len == len(pattern):
                 yield start_pos
+
+    def __str__(self):
+        return 'Knuth Morris Pratt'

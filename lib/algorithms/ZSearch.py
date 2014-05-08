@@ -61,3 +61,6 @@ class ZSearch(StringSearcher):
         for i in range(len(pattern) + 1, len(S)):
             if Z[i] == len(pattern):
                 yield i - len(pattern) - 1
+
+    def __str__(self):
+        return 'Z'
