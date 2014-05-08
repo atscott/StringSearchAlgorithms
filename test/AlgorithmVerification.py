@@ -14,8 +14,7 @@ class TestSearchAlgorithms(unittest.TestCase):
         self.pratt = KnuthMorrisPratt()
         self.naive = NaiveSearch()
         self.z = ZSearch()
-        f = open('aesop11.txt', 'r')
-        self.aesop = f.read()
+        self.aesop = open('aesop11.txt', 'r').read()
 
     def test_knuth_morris_pratt_returns_correct_positions(self):
         locations = list(self.pratt.search(self.test_text, "that"))
