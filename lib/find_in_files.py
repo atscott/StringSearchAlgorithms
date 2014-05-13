@@ -19,5 +19,6 @@ for root, dirs, files in os.walk(path, False):
             if len(list(BoyerMooreHorspool().search(contents, 'java'))) > 0:
                 print(os.path.join(root, name))
                 print(totalSizeSearched)
-        except IOError:
             f.close()
+        except IOError:
+            pass
