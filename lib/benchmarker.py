@@ -12,7 +12,7 @@ current_milli_time = lambda: int(round(time.time() * 1000))
 
 class StringSearchBenchmarker():
     def __init__(self):
-        self.search_algorithms = [BoyerMooreHorspool(), KnuthMorrisPratt(), ZSearch()]
+        self.search_algorithms = [BoyerMooreHorspool(), KnuthMorrisPratt(), ZSearch(), NaiveSearch()]
         self.various_sized_aesops = self.__generate_items_to_search()
 
     def benchmark(self, searchPattern):
@@ -57,4 +57,4 @@ class StringSearchBenchmarker():
 
 
 if __name__ == "__main__":
-    StringSearchBenchmarker().benchmark('They entreated Jupiter that they')
+    StringSearchBenchmarker().benchmark('themselves')
