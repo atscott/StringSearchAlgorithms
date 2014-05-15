@@ -50,11 +50,11 @@ class StringSearchBenchmarker():
         return various_sized_aesops
 
     def __get_aesop_file_contents(self):
-        f = open('onesAndZeroes.txt', 'r')
+        f = open('worstCaseForBoyerMoore.txt', 'r')
         content = f.read()
         f.close()
         return content
 
 
 if __name__ == "__main__":
-    StringSearchBenchmarker().benchmark('10000100')
+    StringSearchBenchmarker().benchmark('something something\n\n')

@@ -7,7 +7,7 @@ searching for some text in your file system (like grep or agent ransack), then y
 __author__ = 'atscott'
 import os
 
-path = 'C:/'
+path = '/home/atscott/'
 
 totalSizeSearched = 0
 for root, dirs, files in os.walk(path, False):
@@ -21,4 +21,6 @@ for root, dirs, files in os.walk(path, False):
                 print(totalSizeSearched)
             f.close()
         except IOError:
+            pass
+        except UnicodeDecodeError:
             pass
